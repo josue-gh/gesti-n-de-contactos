@@ -17,9 +17,12 @@ int main(){
 	
 	const int maximo=50;
 	int hacer, cant=0 ;
+	string respuesta;
 	
 	contactoEmail persona[maximo];
 	
+	//realizar un bucle para que el usuario ejecute acciones hasta que ya no quiera
+	do{
 	//mostramos el menu de entrada
 	cout<<"menu: "<<endl;
 	cout<<endl;
@@ -91,6 +94,9 @@ int main(){
 	    	cout<<"no hay contactos "<<endl;
 		}
 	}
-	
+	//asignando una variable respuesta
+	cout<<"deseas realizar otra accion(si o no)  "<<endl;
+	cin>>respuesta;
+   }while(respuesta =="si" or respuesta=="Si" or respuesta=="SI");
 	return 0;
 }
