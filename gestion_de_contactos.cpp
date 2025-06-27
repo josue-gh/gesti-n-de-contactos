@@ -75,8 +75,12 @@ int main(){
 		//ingresamos el indice del contacto a eliminar
 		cout<<"que contacto desea eliminar(ingrese su indice: 1,2,3.....)"<<endl;
 		cin>>eliminarCont;
+		//asignamos ina variable
+		int elim=eliminarCont;
 		//retroceder el numeros para que vaya de acuerdo al arreglo
 		eliminarCont--;
+		//le decimos al usuario que contacto elimino
+		cout<<"eliminaste al contacto "<<elim<<" :"<<persona[eliminarCont].nombres<<endl;
 		//condicion para eliminar contacto
 		if(eliminarCont>=0 and eliminarCont<cant){
 			//bucle para recorrer los contactos
@@ -91,7 +95,7 @@ int main(){
 		    //disminuir la cantidad de contactos
 		    cant--;
 		}
-		cout<<"eliminaste al contacto "<<eliminarCont<<" :"<<persona[eliminarCont].nombres<<endl;
+		 
 	    }else{
 	    	cout<<"no hay contactos "<<endl;
 		}
