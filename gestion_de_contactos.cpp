@@ -26,9 +26,9 @@ int main(){
 	//mostramos el menu de entrada
 	cout<<"menu: "<<endl;
 	cout<<endl;
-	cout<<"agregar nuevo contacto = 1"<<endl;
-	cout<<"aliminar un contacto = 2"<<endl;
-	
+	cout<<"agregar nuevo contacto (apretar 1)"<<endl;
+	cout<<"aliminar un contacto (apretar 2)"<<endl;
+	cout<<"mostrar lista de contactos (apretar 3)"<<endl;
 	//pedimos lo que desea hacer
 	cout<<"que deseas hacer: "<<endl;
 	cin >> hacer;
@@ -49,13 +49,15 @@ int main(){
 		cin>> persona[i].edad;
 		cout<<endl;
 		cout<<"ingrese el telefono de las persona"<<endl;
-		cin>> persona[i].telefono;
+		cin>>persona[i].telefono;
 		cout<<endl;
+		//limpiar el buffer
+		cin.ignore();
 		cout<<"ingrese el email de la persona"<<endl;
-		cin>> persona[i].email;
+		getline(cin, persona[i].email);
 		cout<<endl;
 		cout<<"ingrese la nacionalidad de la personas"<<endl;
-		cin>> persona[i].nacionalidad;
+		getline(cin, persona[i].nacionalidad);
 		
 		cant++;
 	}else if(hacer==2){
@@ -92,6 +94,14 @@ int main(){
 		cout<<"eliminaste al contacto "<<eliminarCont<<" :"<<persona[eliminarCont].nombres<<endl;
 	    }else{
 	    	cout<<"no hay contactos "<<endl;
+		}
+	}else if(hacer==3){
+		//informo cuantos contactos tiene
+		cout<<"tienes registrado: "<<cant<<" contactos"<<endl;
+		
+		//muestra los contactos que tiene
+		for(int i=0; i<cant; i++){
+			cout<<persona[i].nombres<<endl;
 		}
 	}
 	//asignando una variable respuesta
