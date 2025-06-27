@@ -105,9 +105,11 @@ int main(){
 		
 		//muestra los contactos que tiene
 		for(int i=0; i<cant; i++){
-			cout<<persona[i].nombres<<endl;
+			cout<<i+1<<". "<<persona[i].nombres<<endl;
+			cout<<endl;
 		}
 	}
+	cout<<endl;
 	//asignando una variable respuesta
 	cout<<"deseas realizar otra accion(si o no)  "<<endl;
 	cin>>respuesta;
