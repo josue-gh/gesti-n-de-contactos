@@ -33,6 +33,7 @@ int main(){
 	//pedimos lo que desea hacer
 	cout<<"que deseas hacer: "<<endl;
 	cin >> hacer;
+	cout<<endl;
 	//aplicando el cin.ignore para limpiar el buffer
 	cin.ignore();
 	//comparamos la respuesta
@@ -60,6 +61,7 @@ int main(){
 		cout<<"ingrese la nacionalidad de la personas"<<endl;
 		getline(cin, persona[i].nacionalidad);
 		
+		cout<<endl;
 		cant++;
 	}else if(hacer==2){
 		
@@ -69,7 +71,7 @@ int main(){
 		for(int i=0; i<cant; i++){
 			cout<<"contacto "<<i+1<<" :"<<persona[i].nombres<<endl;
 		}
-		
+		cout<<endl;
 		int eliminarCont;
 		//condicion para saber si hay contactos
 		if(cant>0){
@@ -80,8 +82,9 @@ int main(){
 		int elim=eliminarCont;
 		//retroceder el numeros para que vaya de acuerdo al arreglo
 		eliminarCont--;
+		cout<<endl;
 		//le decimos al usuario que contacto elimino
-		cout<<"eliminaste al contacto "<<elim<<" :"<<persona[eliminarCont].nombres<<endl;
+		cout<<"eliminaste al contacto "<<elim<<": "<<persona[eliminarCont].nombres<<endl;
 		//condicion para eliminar contacto
 		if(eliminarCont>=0 and eliminarCont<cant){
 			//bucle para recorrer los contactos
@@ -99,6 +102,7 @@ int main(){
 		 
 	    }else{
 	    	cout<<"no hay contactos "<<endl;
+	    	cout<<endl;
 		}
 	}else if(hacer==3){
 		//informo cuantos contactos tiene
@@ -110,6 +114,7 @@ int main(){
 			cout<<i+1<<". "<<persona[i].telefono<<" - "<<persona[i].nacionalidad<<endl;
 			cout<<endl;
 		}
+		cout<<endl;
 	}else if(hacer == 4){
 		//mostramos la cantidad de contactos
 		cout<<"tienes "<<cant<<" contactos"<<endl;
@@ -131,6 +136,7 @@ int main(){
 				}
 			}	
 		}
+		cout<<endl;
 		for(int i=0; i<cant; i++){
 			for(size_t j=0; j<persona[i].email.size(); j++){
 				l=persona[i].email[j];
@@ -143,7 +149,7 @@ int main(){
 				}
 			}
 		}
-		
+		cout<<endl;
 		for(int i=0; i<cant; i++){
 			for(size_t j=0; j<persona[i].email.size(); j++){
 				l=persona[i].email[j];
@@ -158,14 +164,15 @@ int main(){
 			}
 			
 		}
-		
+		cout<<endl;
 	}else{
 		cout<<"no encontramos lo que desea hacer... vuelva a intentarlo"<<endl;
+		cout<<endl;
 	}
-	cout<<endl;
 	//asignando una variable respuesta
 	cout<<"deseas realizar otra accion(si o no)  "<<endl;
 	cin>>respuesta;
+	cout<<endl;
    }while(respuesta =="si" or respuesta=="Si" or respuesta=="SI");
 	return 0;
 }
